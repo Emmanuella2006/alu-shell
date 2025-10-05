@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-# This script displays the IP address and HTTP status code from Apache logs
+# This script displays the IP address and HTTP status code from Ap
 
-awk '{print $1, $9}' apache-access.log
-wget https://raw.githubusercontent.com/holbertonschool/0x02-shell_redirections/master/apache-access.log
+logfile="$1"
+
+if [[ -z "$logfile" ]]; then
+    echo "Usage: $0 <logfile>"
+    exit 1
+fi
+
+awk '{print $1, $9}' "$logfile"
 

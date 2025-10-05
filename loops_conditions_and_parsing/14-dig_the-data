@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Script: 14-dig_the-data
+# Description: Group Apache log data by IP and HTTP code, count occurrences, and sort.
+
+awk '{count[$1" "$9]++} END {for (key in count) printf "%8d %s\n", count[key], key}' apache-access.log | sort -nr
+
