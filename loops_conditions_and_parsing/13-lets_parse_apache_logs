@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
-# This script displays the IP address and HTTP status code from Ap
+# This script displays the visitor IP and HTTP status code from an Apache access log
 
-logfile="$1"
-
-if [[ -z "$logfile" ]]; then
-    echo "Usage: $0 <logfile>"
-    exit 1
-fi
-
-awk '{print $1, $9}' "$logfile"
+awk '{printf "%s %s\n", $1, $9}' apache-access.log
 
