@@ -1,0 +1,2 @@
+echo -e "root:x:0:0:root:/root:/bin/bash\nalice:x:1000:1000:Alice:/home/alice:/bin/sh\nbob:x:1001:1001:Bob:/home/bob:/home/bob" > test_passwd
+grep -v "bin" test_passwd

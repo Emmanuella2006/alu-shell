@@ -1,0 +1,4 @@
+host	logname	time	method	url	response	bytes
+apple.com	-	123	GET	/	200	100
+google.com	-	124	GET	/	200	100
+apple.com	-	125	GET	/	200	100
