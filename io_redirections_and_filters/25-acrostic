@@ -1,2 +1,2 @@
 #!/bin/bash
-while read l; do echo "${l:0:1}"; done | tr -d '\n'; echo
+while read line; do echo -n "${line:0:1}"; done; echo
